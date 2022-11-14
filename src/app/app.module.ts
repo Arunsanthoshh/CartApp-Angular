@@ -8,6 +8,7 @@ import { AuthGuardService } from './services/auth-gaurd.service';
 import { BodyComponent } from './body/body.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { OrdersComponent } from './orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ProductListComponent } from './product-list/product-list.component';
     BodyComponent,
     HeaderComponent,
     ProductListComponent,
+    OrdersComponent,
   ],
   imports: [
     BrowserModule,
