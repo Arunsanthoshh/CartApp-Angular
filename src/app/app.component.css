@@ -1,0 +1,37 @@
+::placeholder {
+    color: gray;
+    font-style: italic;
+}
+
+#login-error {
+    color: red;
+    font-style: italic;
+    font-size: 10px;
+}
+
+.parent-container {
+    position: absolute;
+    top: 30%;
+    left: 37%;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+input {
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: gray;
+    opacity: 0.7;
+}
+
+button {
+    font-size: 18px;
+    width: 100px;
+    height: 30px;
+    background-color: #0066A2;
+    opacity: 0.8;
+    border-radius: 5px;
+    margin-left: 90px;
+}
