@@ -4,15 +4,15 @@ import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-
-  constructor(private authService: AuthService) { }
-  userName: string = this.authService.getLoggedInUser().customerName;
-  ngOnInit(): void {
-
-  }
+  constructor(private authService: AuthService) {}
+  userName: string =
+    this.authService.getLoggedInUser().role != 'ADMIN'
+      ? this.authService.getLoggedInUser().customerName
+      : this.authService.getLoggedInUser().role;
+  ngOnInit(): void {}
   pageInfo: string = 'home';
   homeClick() {
     this.pageInfo = 'home';
@@ -23,5 +23,4 @@ export class HeaderComponent implements OnInit {
   orderClick() {
     this.pageInfo = 'order';
   }
-
 }
