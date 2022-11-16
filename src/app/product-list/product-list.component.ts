@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from './product-list';
 
 @Component({
   selector: 'app-product-list',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
-  constructor() {}
+  constructor(private productService: ProductService) {}
   productList: any[] = [];
   ngOnInit(): void {
     console.log('Hi');
@@ -14,7 +15,10 @@ export class ProductListComponent implements OnInit {
       .then((res) => res.json())
       .then((products) => {
         this.productList = products['products'];
-      })
-      .then(console.log);
+      });
+  }
+
+  addCartClick(id: number, event: any) {
+    this.productService.setItemList(id);
   }
 }

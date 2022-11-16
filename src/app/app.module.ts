@@ -9,6 +9,8 @@ import { BodyComponent } from './body/body.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { OrdersComponent } from './orders/orders.component';
+import { CartComponent } from './cart/cart.component';
+import { ProductService } from './product-list/product-list';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,13 @@ import { OrdersComponent } from './orders/orders.component';
     HeaderComponent,
     ProductListComponent,
     OrdersComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [AuthService, AuthGuardService],
+  providers: [AuthService, AuthGuardService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

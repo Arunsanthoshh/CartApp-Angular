@@ -1,9 +1,9 @@
 <div class="product-list">
   <li *ngFor="let item of productList" class="card">
-    <!-- <img src="/w3images/jeans3.jpg" alt="Denim Jeans" style="width: 100%" /> -->
+    <img src={{item.thumbnail}} style="width: 100%" />
     <h3>{{item.title}}</h3>
     <p class="price">${{item.price}}</p>
     <span>{{item.description}}</span>
-    <p class="cart-button"><button>Add to Cart</button></p>
+    <p class="cart-button"><button (click)="addCartClick(item.id, $event)">Add to Cart</button></p>
   </li>
 </div>

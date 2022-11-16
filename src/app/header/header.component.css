@@ -21,6 +21,6 @@
     color: white;
 }
 
-header a:last-child {
+header .right-element {
     float: right;
 }
