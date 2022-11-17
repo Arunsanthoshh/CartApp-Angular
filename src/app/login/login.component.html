@@ -1,12 +1,12 @@
 <div class="parent-container">
     <form class="login-form" [formGroup]="loginForm" (ngSubmit)="loginFormSubmit()">
-      <h3 align="center"><strong> Login Form </strong></h3><br>
+      <h2><strong> Login Form </strong></h2><br>
       <label>UserName</label>&nbsp;
-      <input placeholder="name here..." name="username" formControlName="username"><br><br>
+      <input placeholder="name here" name="username" formControlName="username"><br><br>
       <label>Password</label>&nbsp;
-      <input placeholder="password here..." name="password" type="password" formControlName="password">
+      <input placeholder="password here" name="password" type="password" formControlName="password">
       <br><br>
-      <button align="center" type="submit">Submit</button><br>
+      <button align="center" type="submit">Log in</button><br>
       <span id="login-error" *ngIf="errorMsg;"> {{userStatus}}</span>
     </form>
   </div>

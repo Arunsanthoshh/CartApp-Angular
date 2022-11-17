@@ -14,13 +14,9 @@ export class CartComponent implements OnInit {
   cartItemList: any[] = [];
   ngOnInit(): void {
     this.productService.cartItemList = [];
-    fetch('https://dummyjson.com/products')
-      .then((res) => res.json())
-      .then((products) => {
-        this.productService.cartItemIds.map((itemId) => {
-          this.productService.cartItemList.push(products['products'][itemId - 1]);
-        })
-      });
+    this.productService.cartItemIds.map((itemId) => {
+      this.productService.cartItemList.push(this.productService.allProductList[itemId - 1]);
+    })
     this.cartItemList = this.productService.cartItemList;
   }
 
@@ -28,7 +24,6 @@ export class CartComponent implements OnInit {
     this.cartItemList = this.cartItemList.filter((list) => {
       return !(list['id'] == clickId)
     });
-    console.log(this.cartItemList);
   }
 
 }

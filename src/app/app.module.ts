@@ -11,6 +11,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { OrdersComponent } from './orders/orders.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductService } from './product-list/product-list';
+import { CustomProductComponent } from './custom-product/custom-product.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import { ProductService } from './product-list/product-list';
     ProductListComponent,
     OrdersComponent,
     CartComponent,
+    CustomProductComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [AuthService, AuthGuardService, ProductService],
   bootstrap: [AppComponent]

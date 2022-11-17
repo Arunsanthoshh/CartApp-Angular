@@ -1,9 +1,10 @@
+<button *ngIf="userRole == 'ADMIN'" class="primary-button" mat-raised-button (click)="addButtonClick()">Add Product</button>
 <div class="product-list">
   <li *ngFor="let item of productList" class="card">
     <img src={{item.thumbnail}} style="width: 100%" />
     <h3>{{item.title}}</h3>
     <p class="price">${{item.price}}</p>
     <span>{{item.description}}</span>
-    <p class="cart-button"><button (click)="addCartClick(item.id, $event)">Add to Cart</button></p>
+    <p class="cart-button"><button (click)="buttonClick(item.id)">{{buttonText}}</button></p>
   </li>
 </div>
