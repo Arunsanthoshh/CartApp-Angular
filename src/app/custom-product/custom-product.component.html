@@ -1,5 +1,5 @@
 <div class="container">
-    <form class="custom-form" [formGroup]="customForm">
+    <form class="custom-form" [formGroup]="customForm" (ngSubmit)="loginFormSubmit()">
       <h3><strong> Update / Add Product </strong></h3><br>
       <label>Title: </label>&nbsp;
       <input placeholder="title here" type="text" name="title" formControlName="title"><br><br>

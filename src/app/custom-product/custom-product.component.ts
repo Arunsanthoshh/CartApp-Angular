@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ProductService } from '../product-list/product-list';
+import { AddProduct } from './add-product';
 
 @Component({
   selector: 'app-custom-product',
@@ -16,9 +17,6 @@ export class CustomProductComponent implements OnInit {
   });
   constructor(private productService: ProductService) {
   }
-  title = this.customForm.get('title')?.value;
-  price = this.customForm.get('price')?.value;
-  description = this.customForm.get('description')?.value;
   editItemId: number = this.productService.editItemId;
   filterItem: any[] = [];
 
@@ -37,5 +35,17 @@ export class CustomProductComponent implements OnInit {
         });
       }
     }
+  }
+
+  loginFormSubmit() {
+    let title = this.customForm.get('title')?.value;
+    let price = this.customForm.get('price')?.value;
+    let description = this.customForm.get('description')?.value;
+    const newProducts = new AddProduct(title, price, description);
+    // console.log(newProducts);
+    this.customForm.reset();
+    console.log(this.productService.allProductList);
+    this.productService.allProductList.push(newProducts);
+    console.log(this.productService.allProductList);
   }
 }

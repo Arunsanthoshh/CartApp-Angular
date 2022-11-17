@@ -10,17 +10,23 @@ import { ProductService } from './product-list';
 })
 
 export class ProductListComponent implements OnInit {
-  constructor(private productService: ProductService, private authService: AuthService, private router: Router) { }
   productList: any[] = [];
   userRole: string = this.authService.getLoggedInUser().role;
   buttonText: string = this.userRole == 'ADMIN' ? 'Edit product' : 'Add to cart';
+
+  constructor(private productService: ProductService, private authService: AuthService, private router: Router) {
+    this.productList = this.productService.allProductList;
+  }
+
   ngOnInit(): void {
-    fetch('https://dummyjson.com/products')
-      .then((res) => res.json())
-      .then((products) => {
-        this.productList = products['products'];
-        this.productService.allProductList = products['products'];
-      });
+    // this.productList = this.productService.getProducts();
+    // fetch('https://dummyjson.com/products')
+    //   .then((res) => res.json())
+    //   .then((products) => {
+    //     this.productList = products['products'];
+    //     this.productService.allProductList = products['products'];
+    //   });
+    this.productList = this.productService.allProductList;
   }
 
   buttonClick(id: number) {
