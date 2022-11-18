@@ -7,8 +7,13 @@ import { HomeComponent } from './home/home.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { AuthGuardService } from './services/auth-gaurd.service';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
+	{
+		path: 'signup',
+		component: SignupComponent
+	},
 	{
 		path: '',
 		component: HomeComponent,

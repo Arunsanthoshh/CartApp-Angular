@@ -32,7 +32,10 @@ export class LoginComponent {
         this.userStatus = 'Credentials does not exist....';
       }
     });
-
     console.log("user name is " + this.loginForm.get('username')?.value);
+  }
+
+  signUpFormSubmit() {    
+    this.router.navigate(['/signup']);
   }
 }

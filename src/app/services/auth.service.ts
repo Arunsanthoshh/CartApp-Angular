@@ -2,16 +2,16 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Customer } from './customer';
+import { customerObservable, Customer } from './customer';
 
-const RegularCustomers = [
-    new Customer(1, 'a', 'a', 'ADMIN'),
-    new Customer(1, 'Santhosh', 's@22', 'CUSTOMER'),
-    new Customer(1, 'Priya', 'p@22', 'CUSTOMER'),
-    new Customer(1, 'Dharsini', 'd@22', 'CUSTOMER'),
-];
+// let RegularCustomers = [
+//     new Customer(1, 'a', 'a', 'ADMIN'),
+//     new Customer(1, 'Santhosh', 's@22', 'CUSTOMER'),
+//     new Customer(1, 'Priya', 'p@22', 'CUSTOMER'),
+//     new Customer(1, 'Dharsini', 'd@22', 'CUSTOMER'),
+// ];
 
-let customerObservable = of(RegularCustomers);
+// let customerObservable = of(RegularCustomers);
 
 @Injectable()
 export class AuthService {

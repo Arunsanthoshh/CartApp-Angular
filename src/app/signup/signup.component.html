@@ -1,0 +1,13 @@
+<div class="container">
+    <form class="signup-form" [formGroup]="signupForm" (ngSubmit)="signFormSubmit()">
+      <h3><strong> Create a new user credential </strong></h3><br>
+      <label>User name: </label>&nbsp;
+      <input type="text" name="name" formControlName="name"><br><br>
+      <label>Password: </label>&nbsp;
+      <input type="password" name="password" formControlName="password"><br><br>
+      <label>Cofirm password: </label>&nbsp;
+      <input type="password" name="c_password" formControlName="c_password"><br><br>
+      <button type="submit">Submit</button><br>
+      <span id="signup-span">{{successMsg}}</span>
+    </form>
+  </div>
