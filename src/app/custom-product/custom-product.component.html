@@ -2,11 +2,11 @@
     <form class="custom-form" [formGroup]="customForm" (ngSubmit)="loginFormSubmit()">
       <h3><strong> Update / Add Product </strong></h3><br>
       <label>Title: </label>&nbsp;
-      <input placeholder="title here" type="text" name="title" formControlName="title"><br><br>
+      <input type="text" name="title" formControlName="title"><br><br>
       <label>Price: </label>&nbsp;
       <input placeholder="in $" type="text" name="price" formControlName="price"><br><br>
       <label>Description: </label>&nbsp;
-      <input id="description" placeholder="about the product" type="text" name="description" formControlName="description"><br>
+      <input id="description" type="text" name="description" formControlName="description"><br>
       <br><br>
       <button align="center" type="submit">Update</button><br>
     </form>

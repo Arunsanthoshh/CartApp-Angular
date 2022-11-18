@@ -1,10 +1,10 @@
 <div class="parent-container">
     <form class="login-form" [formGroup]="loginForm">
       <h2><strong> Login Form </strong></h2><br>
-      <label>UserName</label>&nbsp;
-      <input placeholder="name here" name="username" formControlName="username"><br><br>
+      <label>Username</label>&nbsp;
+      <input name="username" formControlName="username"><br><br>
       <label>Password</label>&nbsp;
-      <input placeholder="password here" name="password" type="password" formControlName="password">
+      <input name="password" type="password" formControlName="password">
       <br><br>
       <button type="submit" (click)="loginFormSubmit()">Log in</button>
       <button type="submit" (click)="signUpFormSubmit()">Sign up</button><br>

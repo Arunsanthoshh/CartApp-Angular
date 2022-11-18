@@ -24,6 +24,8 @@ export class CartComponent implements OnInit {
     this.cartItemList = this.cartItemList.filter((list) => {
       return !(list['id'] == clickId)
     });
+    this.productService.cartItemIds = this.productService.cartItemIds.filter((id) => {
+      return !(id == clickId)
+    });
   }
-
 }

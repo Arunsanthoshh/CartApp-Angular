@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { productsList } from '../product-list';
 
 @Injectable()
 export class ProductService {
@@ -8,11 +9,12 @@ export class ProductService {
     public allProductList: any[] = [];
 
     constructor() {
-        fetch('https://dummyjson.com/products')
-            .then((res) => res.json())
-            .then((products) => {
-                this.allProductList = products['products'];
-            });
+        // fetch('https://dummyjson.com/products')
+        //     .then((res) => res.json())
+        //     .then((products) => {
+        //         this.allProductList = products['products'];
+        //     });
+        this.allProductList = productsList['products'];
     }
     
     setItemList(id: number): void {

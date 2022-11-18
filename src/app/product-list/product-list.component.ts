@@ -26,7 +26,6 @@ export class ProductListComponent implements OnInit {
     //     this.productList = products['products'];
     //     this.productService.allProductList = products['products'];
     //   });
-    this.productList = this.productService.allProductList;
   }
 
   buttonClick(id: number) {
@@ -41,5 +40,12 @@ export class ProductListComponent implements OnInit {
   addButtonClick() {
     this.productService.editItemId = null;
     this.router.navigate(['/edit-product']);
+  }
+
+  closeClick(deleteId: number) {
+    this.productService.allProductList = this.productService.allProductList.filter((list) => {
+      return !(list.id == deleteId)
+    });
+    this.productList = this.productService.allProductList;
   }
 }

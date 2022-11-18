@@ -48,7 +48,20 @@
   opacity: 0.7;
 }
 
-li > span  {
+li>span:first-child {
   font-size: 15px;
   height: 130px;
+}
+
+.close {
+  display: inline-block;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 35px;
+  width: 35px;
+  font-size: 35px;
+  color: red;
+  opacity: 1;
+  background-color: white;
 }
