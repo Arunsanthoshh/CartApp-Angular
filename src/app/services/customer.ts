@@ -5,10 +5,10 @@ export class Customer {
 }
 
 export let regularCustomers = [
-    new Customer(1, 'a', 'a', 'ADMIN'),
-    new Customer(1, 'Santhosh', 's@22', 'CUSTOMER'),
-    new Customer(1, 'Priya', 'p@22', 'CUSTOMER'),
-    new Customer(1, 'Dharsini', 'd@22', 'CUSTOMER'),
+    new Customer(1, 'arun', 'a@22', 'ADMIN'),
+    new Customer(1, 'santhosh', 's@22', 'CUSTOMER'),
+    new Customer(1, 'riyaan', 'r@22', 'CUSTOMER'),
+    new Customer(1, 'aadya', 'a@22', 'CUSTOMER'),
 ];
 
 export let customerObservable = of(regularCustomers);
