@@ -32,7 +32,7 @@ export class SignupComponent implements OnInit {
     let name = this.signupForm.get('name')?.value;
     let password = this.signupForm.get('password')?.value;
     let c_password = this.signupForm.get('c_password')?.value;
-    if (password === c_password) {
+    if (password === c_password && password !== null && c_password !== null) {
       regularCustomers.push(new Customer(1, name, password, 'CUSTOMER'));
       this.successMsg = '*Customer credential successfully added.';
       this.router.navigate(['/login'])
